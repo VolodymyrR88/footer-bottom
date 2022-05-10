@@ -1,0 +1,93 @@
+@import "null";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+
+  .header {
+    background: black;
+    color: yellow;
+    height: 60px;
+    line-height: 60px;
+
+    p {
+      margin: 0;
+      display: inline-block;
+      line-height: normal;
+      vertical-align: middle;
+    }
+  }
+
+  .main {
+    background: yellow;
+    color: #333;
+    flex: 1 1 auto;
+    .main-content {
+      margin: 0;
+      padding: 0;
+      .content-link {
+        height: 60px;
+        line-height: 60px;
+        font-weight: bold;
+        font-size: 22px;
+        animation: blink 2s infinite;
+
+        @keyframes blink {
+          from {
+            color: #333;
+          }
+          to {
+            color: rgb(103, 103, 13);
+          }
+
+          to {
+            color: blue;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      #hider {
+        position: absolute;
+        left: -9999px;
+
+        &:checked ~ .colapse {
+          display: block;
+        }
+      }
+      .colapse {
+        margin: 0;
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+
+        li {
+          font-size: 25px;
+          font-style: italic;
+          font-family: "Courier New", Courier, monospace;
+          font-weight: bold;
+          height: 60px;
+          line-height: 60px;
+          transition: 1s;
+
+          &:hover {
+            border-bottom: 1px solid blue;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    background: blue;
+    color: white;
+    padding: 20px;
+  }
+}
