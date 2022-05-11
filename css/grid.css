@@ -1,1 +1,83 @@
-/* No CSS */
+body,
+html {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+  padding: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+  height: 100%;
+}
+
+.container .header {
+  background: yellow;
+  color: blue;
+  position: relative;
+}
+
+.container .header .header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .header .header-link {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.container .header .header-link a {
+  color: blue;
+}
+
+.container .header .header-link a:hover {
+  color: orange;
+}
+
+.container .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+}
+
+.container .footer {
+  background: blue;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}

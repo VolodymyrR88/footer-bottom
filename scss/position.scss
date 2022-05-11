@@ -1,0 +1,46 @@
+@import "null";
+
+.container {
+  position: relative;
+  min-height: 100%;
+  .header {
+    background: yellow;
+    color: blue;
+    position: relative;
+
+    .header-title {
+      display: flex;
+      justify-content: center;
+    }
+    .header-link {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      a {
+        color: blue;
+
+        &:hover {
+          color: orange;
+        }
+      }
+    }
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding-bottom: 50px;
+  }
+
+  .footer {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background: blue;
+    color: white;
+    // padding: 20px;
+    text-align: center;
+  }
+}
