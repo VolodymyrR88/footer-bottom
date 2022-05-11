@@ -84,7 +84,6 @@ a:focus {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 15px;
   }
 }
 
@@ -119,6 +118,12 @@ a:focus {
           transform: translate(-25%, -50%);
 }
 
+@media (max-width: 400px) {
+  .container .main .main-content-wrapper .main-content-left {
+    padding: 15px 0 0;
+  }
+}
+
 @media (max-width: 1000px) {
   .container .main .main-content-wrapper .main-content-left {
     position: static;
@@ -130,9 +135,11 @@ a:focus {
 }
 
 .container .main .main-content-wrapper .main-content-right {
+  font-size: 18px;
   background: grey;
   color: white;
   position: absolute;
+  padding: 15px 0;
   top: 50%;
   right: 25%;
   -webkit-transform: translate(25%, -50%);
@@ -147,7 +154,8 @@ a:focus {
 .container .main .main-content-wrapper .main-content-right pre hr {
   position: absolute;
   top: 18px;
-  width: 100%;
+  left: 5px;
+  width: 95%;
 }
 
 @media (max-width: 1000px) {
@@ -157,15 +165,14 @@ a:focus {
     left: auto;
     -webkit-transform: none;
             transform: none;
-    padding: 25px;
     font-size: 14px;
+    width: 300px;
   }
 }
 
 @media (max-width: 400px) {
   .container .main .main-content-wrapper .main-content-right {
-    padding: 15px 0;
-    right: 0;
+    width: 300px;
   }
 }
 
@@ -197,6 +204,7 @@ a:focus {
   .container .main .subtitle {
     position: static;
     margin: 0;
+    padding: 15px;
   }
 }
 

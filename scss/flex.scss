@@ -39,7 +39,6 @@
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
-      margin-bottom: 15px;
     }
   }
   .main {
@@ -61,6 +60,10 @@
         left: 25%;
         transform: translate(-25%, -50%);
 
+        @media (max-width: 400px) {
+          padding: 15px 0 0;
+        }
+
         @media (max-width: 1000px) {
           position: static;
           top: auto;
@@ -70,9 +73,11 @@
       }
 
       .main-content-right {
+        font-size: 18px;
         background: grey;
         color: white;
         position: absolute;
+        padding: 15px 0;
         top: 50%;
         right: 25%;
         transform: translate(25%, -50%);
@@ -84,10 +89,8 @@
           hr {
             position: absolute;
             top: 18px;
-            width: 100%;
-          }
-
-          @media (max-width: 400px) {
+            left: 5px;
+            width: 95%;
           }
         }
 
@@ -96,13 +99,12 @@
           top: auto;
           left: auto;
           transform: none;
-          padding: 25px;
           font-size: 14px;
+          width: 300px;
         }
 
         @media (max-width: 400px) {
-          padding: 15px 0;
-          right: 0;
+          width: 300px;
         }
       }
 
@@ -123,6 +125,7 @@
       @media (max-width: 1000px) {
         position: static;
         margin: 0;
+        padding: 15px;
       }
     }
 
