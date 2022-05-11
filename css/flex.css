@@ -98,7 +98,8 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: black;
+  background: #333;
+  color: white;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -129,6 +130,8 @@ a:focus {
 }
 
 .container .main .main-content-wrapper .main-content-right {
+  background: grey;
+  color: white;
   position: absolute;
   top: 50%;
   right: 25%;
@@ -145,12 +148,6 @@ a:focus {
   position: absolute;
   top: 18px;
   width: 100%;
-}
-
-@media (max-width: 400px) {
-  .container .main .main-content-wrapper .main-content-right pre hr {
-    display: none;
-  }
 }
 
 @media (max-width: 1000px) {

@@ -46,7 +46,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    background: #333;
+    color: white;
     flex: 1 1 auto;
     position: relative;
 
@@ -69,6 +70,8 @@
       }
 
       .main-content-right {
+        background: grey;
+        color: white;
         position: absolute;
         top: 50%;
         right: 25%;
@@ -82,10 +85,6 @@
             position: absolute;
             top: 18px;
             width: 100%;
-
-            @media (max-width: 400px) {
-              display: none;
-            }
           }
 
           @media (max-width: 400px) {
