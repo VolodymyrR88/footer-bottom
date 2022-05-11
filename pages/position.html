@@ -4,23 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/position.css" />
+    <link rel="stylesheet" href="../css/position.css" />
     <title>Position</title>
   </head>
   <body>
     <div class="container">
-      <header class="header">
-        <div class="header-title">
-          <p>Its a header</p>
-        </div>
-        <div class="header-link">
-          <a href="index.html" class="button">Home page</a>
-        </div>
-      </header>
-      <main class="main">
-        <img src="img/ukraine.jpg" alt="Ukraine" width="300" height="200" />
-        <p class="subtitle">The footer is placed with position absolute</p>
-      </main>
+      <div class="content-wrap">
+        <header class="header">
+          <div class="header-title">
+            <p>Its a header</p>
+          </div>
+          <div class="header-link">
+            <a href="../index.html" class="button">Home page</a>
+          </div>
+        </header>
+        <main class="main">
+          <div class="main-content-wrapper">
+            <div class="main-content-left">
+              <img
+                src="../img/ukraine.jpg"
+                alt="Ukraine"
+                width="300"
+                height="200"
+              />
+            </div>
+            <div class="main-content-right">
+              <pre>
+html:
+  .container>.content-wrap>header+main^footer
+<hr>
+CSS:
+  body,
+  html {
+    height: 100%;
+  }
+
+  .container {
+    position: relative;
+    height: 100%;
+  }
+
+  .content-wrap {
+    padding-bottom: 50px; /* Footer height */
+  }
+
+  footer {
+    position: absolut;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+  }
+              </pre>
+            </div>
+          </div>
+          <div class="subtitle">
+            <p>The footer is placed with position absolute</p>
+          </div>
+        </main>
+      </div>
       <footer class="footer">Its a footer</footer>
     </div>
   </body>

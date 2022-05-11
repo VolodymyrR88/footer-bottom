@@ -1,46 +1,94 @@
 @import "null";
 
+body {
+  background: #333;
+}
+
 .container {
   position: relative;
-  min-height: 100%;
-  .header {
-    background: yellow;
-    color: blue;
-    position: relative;
+  height: 100%;
+  .content-wrap {
+    padding-bottom: 50px;
 
-    .header-title {
-      display: flex;
-      justify-content: center;
+    .header {
+      background: yellow;
+      color: blue;
+      position: relative;
+
+      .header-title {
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+      }
+      .header-link {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        a {
+          color: blue;
+
+          &:hover {
+            color: orange;
+          }
+        }
+
+        @media (max-width: 400px) {
+          position: static;
+          top: auto;
+          right: auto;
+          padding: 10px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        position: static;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+      }
     }
-    .header-link {
-      position: absolute;
-      top: 5px;
-      right: 10px;
-      a {
-        color: blue;
 
-        &:hover {
-          color: orange;
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .main-content-wrapper {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .main-content-left {
+        }
+        .main-content-right {
+          background: grey;
+          color: white;
+        }
+      }
+      .subtitle {
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        height: 150px;
+        line-height: 150px;
+
+        p {
+          margin: 0;
+          display: inline-block;
+          vertical-align: middle;
         }
       }
     }
   }
-  .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    padding-bottom: 50px;
-  }
 
   .footer {
     position: absolute;
-    height: 50px;
     width: 100%;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
     background: blue;
     color: white;
-    // padding: 20px;
-    text-align: center;
   }
 }

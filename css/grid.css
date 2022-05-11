@@ -42,6 +42,7 @@ a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 20px;
 }
 
 .container .header .header-link {
@@ -58,21 +59,157 @@ a:focus {
   color: orange;
 }
 
+@media (max-width: 400px) {
+  .container .header .header-link {
+    position: static;
+    top: auto;
+    right: auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container .header {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .container .main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: black;
+  background: #333;
+  color: white;
+  position: relative;
+}
+
+.container .main .main-content-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.container .main .main-content-wrapper .main-content-left {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  -webkit-transform: translate(-25%, -50%);
+          transform: translate(-25%, -50%);
+}
+
+@media (max-width: 400px) {
+  .container .main .main-content-wrapper .main-content-left {
+    padding: 15px 0 0;
+  }
+}
+
+@media (max-width: 1016px) {
+  .container .main .main-content-wrapper .main-content-left {
+    position: static;
+    top: auto;
+    left: auto;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.container .main .main-content-wrapper .main-content-right {
+  font-size: 18px;
+  background: grey;
+  color: white;
+  position: absolute;
+  padding: 15px 0;
+  top: 50%;
+  right: 25%;
+  -webkit-transform: translate(25%, -50%);
+          transform: translate(25%, -50%);
+}
+
+.container .main .main-content-wrapper .main-content-right pre {
+  position: relative;
+  margin: 0;
+}
+
+.container .main .main-content-wrapper .main-content-right pre hr {
+  position: absolute;
+  top: 18px;
+  left: 5px;
+  width: 95%;
+}
+
+@media (max-width: 1016px) {
+  .container .main .main-content-wrapper .main-content-right {
+    position: static;
+    top: auto;
+    left: auto;
+    -webkit-transform: none;
+            transform: none;
+    font-size: 14px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container .main .main-content-wrapper .main-content-right {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1016px) {
+  .container .main .main-content-wrapper {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.container .main .subtitle {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 18px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (max-width: 1016px) {
+  .container .main .subtitle {
+    position: static;
+    margin: 0;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 1016px) {
+  .container .main {
+    position: static;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .container .footer {

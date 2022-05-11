@@ -12,6 +12,7 @@
     .header-title {
       display: flex;
       justify-content: center;
+      font-size: 20px;
     }
     .header-link {
       position: absolute;
@@ -24,14 +25,113 @@
           color: orange;
         }
       }
+
+      @media (max-width: 400px) {
+        position: static;
+        top: auto;
+        right: auto;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      position: static;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
     }
   }
   .main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: black;
+    background: #333;
+    color: white;
+    position: relative;
+
+    .main-content-wrapper {
+      width: 100%;
+      position: relative;
+
+      .main-content-left {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-25%, -50%);
+
+        @media (max-width: 400px) {
+          padding: 15px 0 0;
+        }
+
+        @media (max-width: 1016px) {
+          position: static;
+          top: auto;
+          left: auto;
+          transform: none;
+        }
+      }
+
+      .main-content-right {
+        font-size: 18px;
+        background: grey;
+        color: white;
+        position: absolute;
+        padding: 15px 0;
+        top: 50%;
+        right: 25%;
+        transform: translate(25%, -50%);
+
+        pre {
+          position: relative;
+          margin: 0;
+
+          hr {
+            position: absolute;
+            top: 18px;
+            left: 5px;
+            width: 95%;
+          }
+        }
+
+        @media (max-width: 1016px) {
+          position: static;
+          top: auto;
+          left: auto;
+          transform: none;
+          font-size: 14px;
+          width: 300px;
+        }
+
+        @media (max-width: 400px) {
+          width: 300px;
+        }
+      }
+
+      @media (max-width: 1016px) {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .subtitle {
+      position: absolute;
+      bottom: 0;
+      margin: 0 0 18px;
+      font-weight: bold;
+      font-size: 18px;
+
+      @media (max-width: 1016px) {
+        position: static;
+        margin: 0;
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 1016px) {
+      position: static;
+      flex-direction: column;
+    }
   }
 
   .footer {
