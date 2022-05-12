@@ -21,8 +21,9 @@ a:focus {
   text-decoration: none;
 }
 
+html,
 body {
-  background: #333;
+  height: auto;
 }
 
 .container {
@@ -30,118 +31,178 @@ body {
   height: 100%;
 }
 
-.container .content-wrap {
-  padding-bottom: 50px;
+.container .content-wrapper {
+  padding-bottom: 70px;
+  background: #333;
 }
 
-.container .content-wrap .header {
+.container .content-wrapper .header .header-wrapper {
+  position: relative;
   background: yellow;
   color: blue;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.container .content-wrap .header .header-title {
+.container .content-wrapper .header .header-wrapper .header-title {
+  height: 70px;
+  line-height: 70px;
+}
+
+.container .content-wrapper .header .header-wrapper .header-title .header-title-text {
+  font-size: 20px;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .container .content-wrapper .header .header-wrapper .header-title {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+.container .content-wrapper .header .header-wrapper .header-nav {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.container .content-wrapper .header .header-wrapper .header-nav .header-nav-link {
+  color: blue;
+}
+
+.container .content-wrapper .header .header-wrapper .header-nav .header-nav-link:hover {
+  color: orange;
+}
+
+@media (max-width: 800px) {
+  .container .content-wrapper .header .header-wrapper .header-nav {
+    position: static;
+    right: auto;
+    top: auto;
+    padding-top: 8px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container .content-wrapper .header .header-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.container .content-wrapper .main .main-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 20px;
-}
-
-.container .content-wrap .header .header-link {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-}
-
-.container .content-wrap .header .header-link a {
-  color: blue;
-}
-
-.container .content-wrap .header .header-link a:hover {
-  color: orange;
-}
-
-@media (max-width: 400px) {
-  .container .content-wrap .header .header-link {
-    position: static;
-    top: auto;
-    right: auto;
-    padding: 10px;
-  }
-}
-
-@media (max-width: 400px) {
-  .container .content-wrap .header {
-    position: static;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.container .content-wrap .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.container .content-wrap .main .main-content-wrapper {
-  padding-top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 20px 0;
+  margin: 0 10px;
 }
 
-.container .content-wrap .main .main-content-wrapper .main-content-right {
+.container .content-wrapper .main .main-content .main-left {
+  margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+  .container .content-wrapper .main .main-content .main-left {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+}
+
+.container .content-wrapper .main .main-content .main-right {
+  margin-left: 10px;
   background: grey;
-  color: white;
+  color: #fff;
 }
 
-.container .content-wrap .main .subtitle {
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  height: 150px;
-  line-height: 150px;
-}
-
-.container .content-wrap .main .subtitle p {
+.container .content-wrapper .main .main-content .main-right .main-right-text {
   margin: 0;
-  display: inline-block;
-  vertical-align: middle;
+}
+
+@media (max-width: 800px) {
+  .container .content-wrapper .main .main-content .main-right .main-right-text {
+    white-space: pre-wrap;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container .content-wrapper .main .main-content .main-right .main-right-text {
+    width: 300px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container .content-wrapper .main .main-content .main-right {
+    margin: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .container .content-wrapper .main .main-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px 0;
+  }
+}
+
+.container .content-wrapper .main .main-title {
+  text-align: center;
+}
+
+.container .content-wrapper .main .main-title .main-title-text {
+  color: #fff;
+  font-size: 20px;
+}
+
+@media (max-width: 400px) {
+  .container .content-wrapper .main .main-title .main-title-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 370px) {
+  .container .content-wrapper .main .main-title .main-title-text {
+    font-size: 16px;
+  }
 }
 
 .container .footer {
   position: absolute;
-  width: 100%;
   bottom: 0;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
   background: blue;
-  color: white;
+}
+
+.container .footer .footer-title .footer-title-text {
+  text-align: center;
+  margin: 0;
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .container .footer {
+    height: 60px;
+    line-height: 60px;
+  }
 }

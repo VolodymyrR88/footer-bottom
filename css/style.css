@@ -48,7 +48,8 @@ a:focus {
 }
 
 .container .main {
-  background: yellow;
+  background: -webkit-gradient(linear, left bottom, right top, from(yellow), color-stop(white), color-stop(blue), color-stop(white), color-stop(yellow), color-stop(white), to(blue));
+  background: linear-gradient(to right top, yellow, white, blue, white, yellow, white, blue);
   color: #333;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -97,6 +98,12 @@ a:focus {
   cursor: pointer;
 }
 
+@media (max-width: 500px) {
+  .container .main .main-content .content-link {
+    font-size: 20px;
+  }
+}
+
 .container .main .main-content #hider {
   position: absolute;
   left: -9999px;
@@ -108,6 +115,7 @@ a:focus {
 
 .container .main .main-content .colapse {
   margin: 0;
+  width: 400px;
   display: none;
   position: absolute;
   left: 50%;
@@ -130,6 +138,30 @@ a:focus {
   border-bottom: 1px solid blue;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+@media (max-width: 500px) {
+  .container .main .main-content .colapse li {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container .main .main-content .colapse li {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container .main .main-content .colapse {
+    width: 300px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container .main .main-content .colapse {
+    width: 260px;
+  }
 }
 
 .container .footer {

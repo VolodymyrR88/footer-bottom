@@ -63,15 +63,6 @@ a:focus {
 }
 
 @media (max-width: 400px) {
-  .container .header .header-link {
-    position: static;
-    top: auto;
-    right: auto;
-    padding: 10px;
-  }
-}
-
-@media (max-width: 400px) {
   .container .header {
     position: static;
     display: -webkit-box;
@@ -84,6 +75,18 @@ a:focus {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .container .header .header-title {
+    padding: 10px 0;
+  }
+  .container .header .header-title p {
+    margin: 0;
+  }
+  .container .header .header-link {
+    position: static;
+    top: auto;
+    right: auto;
+    padding: 10px;
   }
 }
 
@@ -124,16 +127,6 @@ a:focus {
   }
 }
 
-@media (max-width: 1000px) {
-  .container .main .main-content-wrapper .main-content-left {
-    position: static;
-    top: auto;
-    left: auto;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
 .container .main .main-content-wrapper .main-content-right {
   font-size: 18px;
   background: grey;
@@ -158,25 +151,28 @@ a:focus {
   width: 95%;
 }
 
-@media (max-width: 1000px) {
-  .container .main .main-content-wrapper .main-content-right {
-    position: static;
-    top: auto;
-    left: auto;
-    -webkit-transform: none;
-            transform: none;
-    font-size: 14px;
-    width: 300px;
-  }
-}
-
 @media (max-width: 400px) {
   .container .main .main-content-wrapper .main-content-right {
     width: 300px;
   }
 }
 
+.container .main .subtitle {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 18px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 @media (max-width: 1000px) {
+  .container .main {
+    position: static;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .container .main .main-content-wrapper {
     position: static;
     display: -webkit-box;
@@ -190,31 +186,26 @@ a:focus {
         -ms-flex-align: center;
             align-items: center;
   }
-}
-
-.container .main .subtitle {
-  position: absolute;
-  bottom: 0;
-  margin: 0 0 18px;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-@media (max-width: 1000px) {
+  .container .main .main-content-wrapper .main-content-left {
+    position: static;
+    top: auto;
+    left: auto;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .container .main .main-content-wrapper .main-content-right {
+    position: static;
+    top: auto;
+    left: auto;
+    -webkit-transform: none;
+            transform: none;
+    font-size: 14px;
+    width: 300px;
+  }
   .container .main .subtitle {
     position: static;
     margin: 0;
     padding: 15px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .container .main {
-    position: static;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 

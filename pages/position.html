@@ -9,60 +9,70 @@
   </head>
   <body>
     <div class="container">
-      <div class="content-wrap">
+      <div class="content-wrapper">
         <header class="header">
-          <div class="header-title">
-            <p>Its a header</p>
-          </div>
-          <div class="header-link">
-            <a href="../index.html" class="button">Home page</a>
+          <div class="header-wrapper">
+            <div class="header-title">
+              <p class="header-title-text">Its a header</p>
+            </div>
+            <div class="header-nav">
+              <a href="../index.html" class="header-nav-link">Home page</a>
+            </div>
           </div>
         </header>
+
         <main class="main">
-          <div class="main-content-wrapper">
-            <div class="main-content-left">
+          <div class="main-content">
+            <div class="main-left">
               <img
                 src="../img/ukraine.jpg"
                 alt="Ukraine"
+                class="main-left-img"
+                title="Ukrainian flag"
                 width="300"
                 height="200"
               />
             </div>
-            <div class="main-content-right">
-              <pre>
-html:
-  .container>.content-wrap>header+main^footer
-<hr>
-CSS:
-  body,
-  html {
-    height: 100%;
-  }
+            <div class="main-right">
+              <pre class="main-right-text">
+                
+  html:
 
-  .container {
-    position: relative;
-    height: 100%;
-  }
+    .container>.content-wrapper>header+main^footer
+ <hr>
+  css:
 
-  .content-wrap {
-    padding-bottom: 50px; /* Footer height */
-  }
+    .container {
+      position: relative;
+      height: 100%;
+    }
 
-  footer {
-    position: absolut;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-  }
-              </pre>
+    .content-wrapper {
+      padding-bottom: 70px; <!-- footer height -->
+    }
+
+    footer {
+      position: absolut;
+      bottom: 0;
+      width: 100%;
+      height: 70px;
+    }
+
+            </pre>
             </div>
           </div>
-          <div class="subtitle">
-            <p>The footer is placed with position absolute</p>
+          <div class="main-title">
+            <p class="main-title-text">
+              The footer is placed whith position absolut
+            </p>
           </div>
         </main>
       </div>
-      <footer class="footer">Its a footer</footer>
+      <footer class="footer">
+        <div class="footer-title">
+          <p class="footer-title-text">Its a footer</p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

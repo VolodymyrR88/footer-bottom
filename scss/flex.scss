@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+
   .header {
     background: yellow;
     color: blue;
@@ -25,22 +26,32 @@
           color: orange;
         }
       }
+    }
 
-      @media (max-width: 400px) {
+    // ** .header 400px media query-----------------------
+    @media (max-width: 400px) {
+      position: static;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .header-title {
+        padding: 10px 0;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .header-link {
         position: static;
         top: auto;
         right: auto;
         padding: 10px;
       }
     }
-
-    @media (max-width: 400px) {
-      position: static;
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-    }
   }
+
   .main {
     display: flex;
     justify-content: center;
@@ -62,13 +73,6 @@
 
         @media (max-width: 400px) {
           padding: 15px 0 0;
-        }
-
-        @media (max-width: 1000px) {
-          position: static;
-          top: auto;
-          left: auto;
-          transform: none;
         }
       }
 
@@ -93,26 +97,9 @@
             width: 95%;
           }
         }
-
-        @media (max-width: 1000px) {
-          position: static;
-          top: auto;
-          left: auto;
-          transform: none;
-          font-size: 14px;
-          width: 300px;
-        }
-
         @media (max-width: 400px) {
           width: 300px;
         }
-      }
-
-      @media (max-width: 1000px) {
-        position: static;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
       }
     }
     .subtitle {
@@ -121,17 +108,40 @@
       margin: 0 0 18px;
       font-weight: bold;
       font-size: 18px;
+    }
 
-      @media (max-width: 1000px) {
+    //** .main 1000px media query------------------------
+    @media (max-width: 1000px) {
+      position: static;
+      flex-direction: column;
+
+      .main-content-wrapper {
+        .main-content-left {
+          position: static;
+          top: auto;
+          left: auto;
+          transform: none;
+        }
+
+        .main-content-right {
+          position: static;
+          top: auto;
+          left: auto;
+          transform: none;
+          font-size: 14px;
+          width: 300px;
+        }
+
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .subtitle {
         position: static;
         margin: 0;
         padding: 15px;
       }
-    }
-
-    @media (max-width: 1000px) {
-      position: static;
-      flex-direction: column;
     }
   }
 

@@ -21,7 +21,16 @@
   }
 
   .main {
-    background: yellow;
+    background: linear-gradient(
+      to right top,
+      yellow,
+      white,
+      blue,
+      white,
+      yellow,
+      white,
+      blue
+    );
     color: #333;
     flex: 1 1 auto;
     .main-content {
@@ -50,6 +59,10 @@
         &:hover {
           cursor: pointer;
         }
+
+        @media (max-width: 500px) {
+          font-size: 20px;
+        }
       }
 
       #hider {
@@ -62,6 +75,7 @@
       }
       .colapse {
         margin: 0;
+        width: 400px;
         display: none;
         position: absolute;
         left: 50%;
@@ -80,6 +94,22 @@
             border-bottom: 1px solid blue;
             transform: scale(1.2);
           }
+
+          @media (max-width: 500px) {
+            font-size: 19px;
+          }
+
+          @media (max-width: 360px) {
+            font-size: 18px;
+          }
+        }
+
+        @media (max-width: 500px) {
+          width: 300px;
+        }
+
+        @media (max-width: 360px) {
+          width: 260px;
         }
       }
     }
