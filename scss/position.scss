@@ -1,7 +1,24 @@
-@import "null";
-html,
-body {
-  height: auto;
+body,
+html {
+  font-family: Arial, "Helvetica Neue", Helvetica, Verdana, Geneva, Tahoma,
+    sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+  padding: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  color: #333;
+  text-decoration: none;
 }
 
 .container {
