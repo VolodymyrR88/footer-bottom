@@ -115,7 +115,7 @@ a:focus {
 
 .container .main .main-content .colapse {
   margin: 0;
-  width: 400px;
+  width: 410px;
   display: none;
   position: absolute;
   left: 50%;
@@ -140,27 +140,34 @@ a:focus {
           transform: scale(1.2);
 }
 
+@media (max-width: 370px) {
+  .container .main .main-content .colapse li:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
 @media (max-width: 500px) {
   .container .main .main-content .colapse li {
     font-size: 19px;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   .container .main .main-content .colapse li {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
 @media (max-width: 500px) {
   .container .main .main-content .colapse {
-    width: 300px;
+    width: 310px;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   .container .main .main-content .colapse {
-    width: 260px;
+    width: 290px;
   }
 }
 

@@ -75,7 +75,7 @@
       }
       .colapse {
         margin: 0;
-        width: 400px;
+        width: 410px;
         display: none;
         position: absolute;
         left: 50%;
@@ -93,23 +93,28 @@
           &:hover {
             border-bottom: 1px solid blue;
             transform: scale(1.2);
+
+            //** li:hover media query----------------------
+            @media (max-width: 370px) {
+              transform: scale(1.1);
+            }
           }
 
           @media (max-width: 500px) {
             font-size: 19px;
           }
 
-          @media (max-width: 360px) {
-            font-size: 18px;
+          @media (max-width: 380px) {
+            font-size: 17px;
           }
         }
 
         @media (max-width: 500px) {
-          width: 300px;
+          width: 310px;
         }
 
-        @media (max-width: 360px) {
-          width: 260px;
+        @media (max-width: 380px) {
+          width: 290px;
         }
       }
     }
